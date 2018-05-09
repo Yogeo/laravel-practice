@@ -22,6 +22,8 @@ Route::get('test/before', 'TestController@before');
 
 Route::get('test/after', 'TestController@after');
 
+Route::get('test/checkMetaData', 'TestController@checkMetaData');
+
 Route::get('test/{id?}/{pass?}', 'TestController@routeParam');
 
 Route::get('singleAction', 'SingleActionController');

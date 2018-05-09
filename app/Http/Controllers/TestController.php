@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 global $head, $style, $body, $end;
 
@@ -78,5 +79,23 @@ class TestController extends Controller
         $html .= tag("p", "this page is called by after method on TestController.");
         $html .= $end;
         return $html;
+    }
+
+    public function checkMetaData(Request $request, Response $response) {
+
+        global $head, $style, $body, $end;
+
+        // create html
+        $html = $head . tag("title", "TestController>checkMetaData") . $style . $body;
+        $html .= tag("h1", "checkMetaData");
+        $html .= tag("p", "this page is called by checkMetaData method on TestController.");
+        $html .= tag("h3", "Request");
+        $html .= tag("pre", "{$request}");
+        $html .= tag("h3", "Response");
+        $html .= tag("pre", "{$response}");
+        $html .= $end;
+
+        $response->setContent($html);
+        return $response;
     }
 }
