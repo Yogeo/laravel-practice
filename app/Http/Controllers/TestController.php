@@ -55,4 +55,28 @@ class TestController extends Controller
         return $html;
     }
 
+    public function before() {
+
+        global $head, $style, $body, $end;
+
+        // create html
+        $html = $head . tag("title", "TestController>before") . $style . $body;
+        $html .= tag("h1", "before");
+        $html .= tag("p", "this page is called by before method on TestController.");
+        $html .= "<a href='/test/after'>goto next page.</a>";
+        $html .= $end;
+        return $html;
+    }
+
+    public function after() {
+
+        global $head, $style, $body, $end;
+
+        // create html
+        $html = $head . tag("title", "TestController>after") . $style . $body;
+        $html .= tag("h1", "after");
+        $html .= tag("p", "this page is called by after method on TestController.");
+        $html .= $end;
+        return $html;
+    }
 }

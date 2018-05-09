@@ -17,4 +17,9 @@ Route::get('/', function () {
 
 Route::get('test', 'TestController@index');
 
+// if you change order of the route, the method what is called by route config may change.
+Route::get('test/before', 'TestController@before');
+
+Route::get('test/after', 'TestController@after');
+
 Route::get('test/{id?}/{pass?}', 'TestController@routeParam');
