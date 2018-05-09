@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('test', 'TestController@index');
+
+Route::get('test/{id?}/{pass?}', 'TestController@routeParam');
