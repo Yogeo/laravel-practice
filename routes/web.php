@@ -27,3 +27,8 @@ Route::get('test/checkMetaData', 'TestController@checkMetaData');
 Route::get('test/{id?}/{pass?}', 'TestController@routeParam');
 
 Route::get('singleAction', 'SingleActionController');
+
+// php template
+Route::get('phpTemplate', function() {
+    return view('practice.testView');
+});
