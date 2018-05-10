@@ -30,3 +30,5 @@ Route::get('singleAction', 'SingleActionController');
 
 // php template
 Route::get('phpTemplate', 'PhpTemplateController@index');
+
+Route::get('phpTemplate/{id?}', 'PhpTemplateController@routeParam');
