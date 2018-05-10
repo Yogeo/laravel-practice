@@ -18,4 +18,12 @@ class PhpTemplateController extends Controller
             ];
         return view('practice.testRouteParam', $data);
     }
+
+    public function usingQueryParam(Request $request) {
+        $data = [
+            'msg'=>'this is called by PhpTemplateController@usingQueryParam.',
+            'id'=>$request->id
+        ];
+        return view('practice.testRouteParam', $data);
+    }
 }

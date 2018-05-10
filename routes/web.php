@@ -31,4 +31,6 @@ Route::get('singleAction', 'SingleActionController');
 // php template
 Route::get('phpTemplate', 'PhpTemplateController@index');
 
+Route::get('phpTemplate/useQueryParam', 'PhpTemplateController@usingQueryParam');
+
 Route::get('phpTemplate/{id?}', 'PhpTemplateController@routeParam');
