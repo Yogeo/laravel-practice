@@ -29,6 +29,4 @@ Route::get('test/{id?}/{pass?}', 'TestController@routeParam');
 Route::get('singleAction', 'SingleActionController');
 
 // php template
-Route::get('phpTemplate', function() {
-    return view('practice.testView');
-});
+Route::get('phpTemplate', 'PhpTemplateController@index');
