@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class PhpTemplateController extends Controller
 {
     public function index() {
-        return view('practice.testView');
+        $data = ['msg'=>'this is called by PhpTemplateController.'];
+        return view('practice.testView', $data);
     }
 }

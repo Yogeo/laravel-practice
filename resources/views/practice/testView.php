@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>testView index</h1>
-    <p>this is sample page with php-template.</p>
+    <p>this is the page used php-template.</p>
+    <p><?php echo $msg; ?></p>
+    <p><?php echo date("Y-n-j"); ?></p>
 </body>
 </html>
