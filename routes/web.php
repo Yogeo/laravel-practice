@@ -34,3 +34,6 @@ Route::get('phpTemplate', 'PhpTemplateController@index');
 Route::get('phpTemplate/useQueryParam', 'PhpTemplateController@usingQueryParam');
 
 Route::get('phpTemplate/{id?}', 'PhpTemplateController@routeParam');
+
+// blade template
+Route::get('bladeTemplate', 'BladeTemplateController@index');
