@@ -37,3 +37,5 @@ Route::get('phpTemplate/{id?}', 'PhpTemplateController@routeParam');
 
 // blade template
 Route::get('bladeTemplate', 'BladeTemplateController@index');
+
+Route::post('bladeTemplate', 'BladeTemplateController@post');

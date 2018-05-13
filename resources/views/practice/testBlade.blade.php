@@ -8,6 +8,12 @@
 </head>
 <body>
     <h1>testBlade index</h1>
+    <p>{{$explain}}</p>
     <p>{{$msg}}</p>
+    <form method="POST" action="bladeTemplate">
+        {{ csrf_field() }}
+        <input type="text" name="msg">
+        <input type="submit">
+    </form>
 </body>
 </html>
