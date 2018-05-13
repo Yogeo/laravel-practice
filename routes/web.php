@@ -43,3 +43,6 @@ Route::post('bladeTemplate', 'BladeTemplateController@post');
 Route::get('bladeTemplate/directive', 'BladeTemplateController@directive');
 
 Route::post('bladeTemplate/directive', 'BladeTemplateController@directivePost');
+
+// blade extends
+Route::get('bladeExtends', 'BladeExtendsController@index');
