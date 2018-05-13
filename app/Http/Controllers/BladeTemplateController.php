@@ -19,4 +19,22 @@ class BladeTemplateController extends Controller
             'msg'=>'Hello, '. $msg . '.',];
         return view('practice.testBlade', $data);
     }
+
+    public function directive() {
+        $data = ['explain'=>'this page was created by BladeTemplateController>directive.',
+            'msg'=>'',
+            'data'=>['one','two','three','four','five',],
+            ];
+
+        return view('practice.testBladeDirective', $data);
+    }
+
+    public function directivePost(Request $request) {
+        $data = ['explain'=>'this page was created by BladeTemplateController>directive.',
+            'msg'=>$request->msg,
+            'msg2'=>$request->msg2,
+            'data'=>['six','seven','eight','nine','ten',],
+            ];
+        return view('practice.testBladeDirective', $data);
+    }
 }

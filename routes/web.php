@@ -39,3 +39,7 @@ Route::get('phpTemplate/{id?}', 'PhpTemplateController@routeParam');
 Route::get('bladeTemplate', 'BladeTemplateController@index');
 
 Route::post('bladeTemplate', 'BladeTemplateController@post');
+
+Route::get('bladeTemplate/directive', 'BladeTemplateController@directive');
+
+Route::post('bladeTemplate/directive', 'BladeTemplateController@directivePost');
